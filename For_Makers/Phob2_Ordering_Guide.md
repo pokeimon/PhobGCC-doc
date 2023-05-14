@@ -162,4 +162,4 @@ The GCC-specific Parts have a few different methods of acquisition
 
 # Assembly
 
-Once you have all the parts you need, follow the [build guide](/For_Makers/Build_Guide_2.0.md) to assemble your PhobGCC.
+Once you have all the parts you need, follow the [build guide](/For_Makers/Build_Guide_2.0.html) to assemble your PhobGCC.
