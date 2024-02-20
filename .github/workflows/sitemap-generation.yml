@@ -3,7 +3,6 @@ name: Generate sitemap
 on:
   push:
     branches: [ pages ]
-    paths: [ '**.html' ]
 
 jobs:
   sitemap:
