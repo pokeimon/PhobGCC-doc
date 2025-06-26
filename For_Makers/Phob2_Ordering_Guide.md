@@ -50,6 +50,8 @@ Otherwise, you can purchase premade boards directly from [Elecrow](https://www.e
 
 If you plan on ordering around 50 boards or more, or if you want more unusual colors, you should submit a traditional PCB order by following the [Elecrow Ordering Guide](/For_Makers/Phob2_Elecrow_Ordering_Guide.md).
 
+Warning to US residents: ordering from Chinese board houses at this point is likely to result in heavy tariffs.
+
 ## Optional: Purchasing LR Trigger Paddles
 
 If you don't or can't use OEM GCC Trigger paddles, you can order trigger paddles separately.
@@ -106,6 +108,7 @@ The remaining parts can be purchased from distributors as listed below.
   * [N30H Magnets](https://www.digikey.com/short/br3n8hz3)
   * [Canadian option](https://www.indigoinstruments.com/magnets/rare_earth/discs/small-neodymium-cylinder-magnet-2.5x2.5mm.html) - Very similar to DH1H1
   * [EU option](https://www.supermagnete.de/eng/disc-magnets-neodymium?length-or-diameter=2.00,3.00&height=2.00,3.00)
+  * [Australian option](https://magnet.com.au/products/neodymium-cylinder-magnet-2-5mm-x-2-5mm-n50?variant=37006192804005) - Very similar to DH1H1
 * Magnet Mounts:
   * **NOTE: PhobGCC v1.X MAGNET MOUNTS WILL BE VERY BAD, AND MAY NOT WORK AT ALL. MAKE SURE TO GET THE UNDERSLUNG MAGNET MOUNTS!**
   * Download [This](https://drive.google.com/file/d/10-lseJ4UK1-HkkXc6rjSJtsYRW7ihsXD/view?usp=share_link) OpenScad file. It is by default set up for DH1H1 Magnets, so you can edit it for whatever magnet you use, adjust it for your printer, and then generate the STL using [OpenScad](https://openscad.org/). Once you have the STL, you can print it using your own machine or check out local makerspaces, libraries, and print shops.
