@@ -1,15 +1,16 @@
-**NOTE: This is for firmware version 0.31.**
+**NOTE: This is for firmware version 0.29.**
 
-For older versions, use the appropriate calibration document [from here](../LEGACY.html).
+For older versions, use the appropriate calibration document [from here](../LEGACY.md).
 
 For later development versions of the software that have not yet been released, search for “Current Commands List” in the `common/phobGCC.h` file to see the commands for that version as they may have changed.
 
 **NOTE 2: The controller starts in safe mode! To make any changes you must disable it first!**
 
-We strongly recommend using GCC Test Suite (GTS) either on a Wii or vanilla Dolphin for all of this. Slippi will not run GTS.
-You can get GTS [from here](https://github.com/greenwave-1/GTS/releases/latest).
+I strongly recommend using Smashscope (either on a Wii or vanilla Dolphin) for all of this. Slippi will not run Smashscope.
+You can get Smashscope from the Goomwave website.
+When using Smashscope in Dolphin, make sure to **set all Wiimotes to "None" in the Controllers menu** or else the sticks will not display any movement.
 
-Previously we recommended SmashScope and Uncle Punch Training Mode 3.0 (now Training Mode Community Edition), but it is much easier to verify correct calibration on GTS.
+An alternative is Uncle Punch Training Mode 3.0. In the Training Lab menu, under General enable “Input Display”, and under Info Display enable “System LStick”, “System CStick”, and “System Trigger” as the first three rows.
 
 # PhobVision
 
@@ -22,38 +23,21 @@ Navigate with the D-pad, select an item by pressing A, and back out by holding B
 
 Some menu pages are not complete yet, and on these you will be greeted by an "Under Construction" sign.
 
-Full PhobVision manual available [here](/For_Users/Phobvision_Guide_Latest.html).
+Full PhobVision manual available [here](/For_Users/Phobvision_Guide_Latest.md).
 
 # Initial Setup
 
-Do this if the controller has never been calibrated before, or if it has been flash nuked or hard reset.
-If the controller is functioning normally, this has already been performed and you do not need to repeat the full process.
+**This is only necessary the the first time the controller is set up after it is made, only if you are calibrating using a console.**
+You do not need to do this otherwise, such as if you are calibrating it using PhobVision.
 
-## Wii Initial Setup
+If the controller is functioning normally, this has already been performed and you do not need to repeat the process.
 
-* Turn on the Wii.
+* If using Dolphin, start Dolphin. If using a Wii, turn on the Wii and use another controller to set up your configuration environment.
 * Plug in the controller.
-* Start GCC Test Suite.
-* Navigate to Controller Test (using the D-Pad).
-* Tap B (do not hold) to initialize the sticks.
-* Verify that the Origin XY and C-Origin XY are both (-001, -001).
-
-## Dolphin Initial Setup
-
-* Install the latest Dolphin emulator (do not use Slippi Dolphin).
-* Set up the controller menu so that Port 1 is GameCube Adapter for Wii U.
-* Plug in the controller. DO NOT PRESS B.
-* Begin emulation (run GTS_GC.dol).
-* Navigate to Controller Test (using the D-Pad).
-* Tap B (do not hold) to initialize the sticks.
-* If using an OEM or Mayflash adapter or older Lossless adapters, verify that Origin XY and C-Origin XY are both (-001, -001). If using a HHL GC Pocket adapter or a newer firmware version of Lossless, the origins should be zero.
-
-## Controller Setup
-* Verify that the sticks are both pointing slightly up and to the right. At neutral, they should be somewhere in the range of 0.3 to 0.6. When moved, they should respond very slightly, going in all four directions. If this is not the case, there is a hardware problem that must be resolved before proceeding with calibration.
-* Toggle off Safe Mode by holding **AXY+Start** for until the sticks jump to the extreme top right, then immediately letting go.
-* Calibrate the left analog stick with **AXY+L**, following [this procedure](#analog-stick-calibration---axyl). The left stick should now behave normally.
-* Calibrate the right analog stick with **AXY+R**, following [this procedure](#C-Stick-calibration---axyr). The right stick should now behave normally.
-* Adjust snapback filtering to reduce snapback to roughly 20 or less in each direction. If snapback won't be fully corrected at maximum filtering strength, add some thick silicone grease into the stickbox to slightly reduce the unfiltered snapback to within the range of the snapback filter.
+* If using Dolphin, start the game (Smashscope or Uncle Punch).
+* Toggle off Safe Mode (hold **AXY+Start**). Both sticks should be wonky right now.
+* Calibrate the left analog stick (**AXY+L**, follow [this procedure](#analog-stick-calibration---axyl)). The left stick should behave normally now.
+* Calibrate the C-Stick (**AXY+R**, follow [this procedure](#C-Stick-calibration---axyr)). The right stick should behave normally now.
 
 # Activating the Analog Sticks - B
 
@@ -67,13 +51,13 @@ If the controller is functioning normally, this has already been performed and y
 
 # Making Changes On PhobGCC
 
-* Most of the time, when you give the PhobGCC a command, the Analog Stick and C-Stick will freeze pointing to the top right 127/127.
+* Most of the time, when you give the PhobGCC a command, the Analog Stick and C-Stick will freeze pointing to the top right.
   * For binary commands, it'll hold for two seconds.
   * For numerical values, it'll hold for 0.75 seconds to make it faster to change.
   * For trigger offsets, which have a wide numerical range, it will only hold for 0.1 second.
 * If you're in Melee without input visualization tools, you will see your character roll to the right to indicate this, or you'll see the menu tilt due to the C-Stick.
 
-![Sticks pointing up and to the right, triggers pressed](/For_Users/Phob_Calibration_Guide_v0.20_Images/FreezeSticks_GTS.png)
+![Sticks pointing up and to the right, triggers pressed](/For_Users/Phob_Calibration_Guide_v0.20_Images/FreezeSticks.png)
 
 # Safe Mode Toggle - AXY+Start
 
@@ -87,11 +71,11 @@ If the controller is functioning normally, this has already been performed and y
 
 # Display Software Version - AZ + Du
 
-* The C-Stick will display the software version in raw units as if it were not preceded by the "0."
-  * The Y-axis will show the tens and ones digits. In this case, it would be 31.
+* The C-Stick will display the software version in Melee units as if it were not preceded by the "0."
+  * The Y-axis will show the tens and ones digits. In this case, it would be 29.
   * The X-axis will show the thousands and hundreds digits. In this case, it would be 0.
-* You must use GTS to see this numerically.
-* If the controller doesn't show 31, then you need to reference an older configuration document [here](LEGACY.md).
+* You must use Smashscope to see this numerically.
+* If the controller doesn't show 29, then you need to reference an older configuration document [here](LEGACY.md).
   * If it doesn't respond to this command at all, then it's likely the version is 0.23 or lower and you should [upgrade the controller firmware](/For_Users/Phob_Programming_Guide.md).
 
 # Controller Reset - Hold ABZ then press Start
@@ -103,7 +87,7 @@ If the controller is functioning normally, this has already been performed and y
 
 # Toggle Auto-Initialize - AXYZ
 
-* When you turn this on, both sticks will briefly point up and to the right. When you turn it off, both sticks will briefly point down and to the left.
+* When you turn this on, both sticks will point up and to the right. When you turn it off, both sticks will point down and to the left.
 * If you are positive that both of your sticks are calibrated well, you can use this to avoid the need to press B when plugging the controller in.
 * If calibration ever gets wonky, you need to disable this, then recalibrate.
 * This automatically gets turned off when you:
@@ -119,12 +103,10 @@ If the controller is functioning normally, this has already been performed and y
   * 0 turns off rumble entirely.
 * Press **AB+Start** to show the current rumble setting on the C-Stick.
 
-# Tournament Toggle Configuration - Z + Start + D-pad Up
-
-This command was changed in version 0.31 to prevent accidental activation.
+# Tournament Toggle Configuration - Z + Start
 
 * Tournament Toggle reduces the chance of misinputs of either Start or D-Pad Up (taunt) during gameplay.
-* Press **Z + Start + D-pad Up** to switch to the next mode. The mode will be shown on the C-Stick.
+* Press **Z** + **Start** to switch to the next mode. The mode will be shown on the C-Stick.
 * There are 6 different modes, ranging from 1 to 6.
   * Mode 1: Default behavior: both buttons respond immediately.
   * Mode 2: D-Pad Up must be held for 1.5 seconds to activate.
@@ -132,32 +114,8 @@ This command was changed in version 0.31 to prevent accidental activation.
   * Mode 4: Start must be held for 1.5 seconds to activate.
   * Mode 5: Start and D-Pad Up both must be held for 1.5 seconds to activate.
   * Mode 6: D-Pad Up is disabled entirely and Start must be held for 1.5 seconds to activate.
-* You can bypass the lockout or delay. For D-Pad Up, holding D-Pad Up and then pressing Start will output only D-Pad Up. For Start, holding Start and pressing D-Pad Down will output only Start.
-
-# Raw Stick Output - L+R+Du/Dd
-
-This command is new in version 0.31.
-
-Raw stick output isn't a setting, but a temporary mode that helps diagnose stick issues.
-Instead of the remapped stick output, it shows the unprocessed sensor values in a range from 0 to 100.
-
-Enable it with **LR** + **D-pad Up** and disable it with **LR** + **D-pad Down**.
-
-Alternatively, if you hard reset the controller (or have never calibrated it before) any uncalibrated sticks will default to raw stick output.
-
-With the sticks centered, Phob 2s and some Phob 1.2s should be close to 50. Phob 1.1s and most Phob 1.2s should be roughly 30.
-
-When you move a stick horizontally or vertically, the raw output should change only in that axis by at least 10 in each direction.
-
-If this isn't the case, then the hardware likely needs some sort of repair.
 
 # Analog Stick Calibration - AXY+L
-
-Before you begin calibration, you must verify that the sticks are working electrically and that GCC Test Suite is initialized properly.
-
-Check that the Origin XY and C-Origin XY are both (-001, -001).
-
-Put the controller into Raw Stick Output mode and verify that the sticks are centered roughly on 30 or 50, and are sensitive enough to stick motion in all axes.
 
 [Basic PhobGCC Analog Stick Calibration - YouTube](https://www.youtube.com/watch?v=rkgtqwIE8Iw)
 
@@ -165,6 +123,9 @@ Put the controller into Raw Stick Output mode and verify that the sticks are cen
 
 [PhobGCC Notch Calibration Guide - YouTube](https://youtu.be/hscmtzy7dqs)
 
+**NOTE: If using Dolphin Smashscope, you MUST disable all Wii Remotes**
+
+![DISABLE_WII_REMOTES](/For_Users/Phob_Calibration_Guide_v0.20_Images/disableWiiRemotes.png)
 
 * Stick calibration has two phases: measurement and notch adjustment.
   * During the Measurement Phase, you have the controller record the physical location of the corners of the gate and any modder-added notches.
@@ -261,10 +222,10 @@ This enhancement to pivots and flicks works best with an OEM spring or a Smalley
 * Press **L** + **X/Y** for your axis + **D-pad Up/Down** to increase/decrease.
   * Example: **LX+Du** strengthens the effect on the X-axis, **LY+Dd** reduces the effect on the Y-axis.
   * When you change this setting, the current Waveshaping filter settings are shown as the numerical coordinates of the C-stick.
-* The scale goes from -24 to +24, and defaults to 0.
+* The scale goes from 0-15, and defaults to 0.
   * 0 disables Waveshaping entirely.
-  * Positive Waveshaping behaves like mild PODE.
-  * Negative Waveshaping behaves like strong PODE. Strong negative Waveshaping in combination with zero Smart Snapback suppression this can be used to mimic OEMs that cannot empty pivot while suppressing all snapback. Small negative Smart Snapback can be used to attenuate this effect.
+  * Something between 6 and 10 is usually required to get pivots to behave like OEM controllers.
+  * Ideally, change both axes together to preserve things like dashback out of crouch.
 * Press **L+Start** to see the current Waveshaping filter values on the L and R trigger analog values.
   * At the same time, you can see the current Smart Snapback filter values on the Analog Stick and the axis smoothing values on the C-Stick.
 
@@ -277,10 +238,9 @@ If you have the Smart Snapback Filter disabled, you can use this to suppress sna
 * Press **R** + **X/Y** for your axis + **D-pad Up/Down** to increase/decrease.
   * Example: **RX+Du** increases the X-axis Delay, **RY+Dd** decreases the Y-axis delay.
   * When you change this setting, the current axis smoothing settings are shown as the numerical coordinates of the C-Stick.
-* The scale goes from 0-18, and defaults to 0.
+* The scale goes from 0-9, and defaults to 0.
   * Single-Motion Ledgedashing: ~5 on X-axis and 0 on Y-axis
   * Alternatively, set the Smart Snapback adjustment on the Y-axis to 0 and set the Axis Smoothing to 0 for both X and Y-axes. This gives stronger single-motion ledgedashes but you may experience Y-axis snapback.
-  * 9 in versions before 0.31 was changed to 18, adding increased precision between 8 and the former 9.
 * Press **L+Start** to see the current axis smoothing values on each axis of the C-Stick.
   * At the same time, you can see the current Smart Snapback filter values on the Analog Stick and Waveshaping values on the triggers.
 
@@ -293,10 +253,11 @@ The PhobGCC hard limits its own stick outputs to a range from -125 to +125, but 
 * Press **L** + **A** + **D-pad Up/Down** to increase/decrease.
   * Example: **LA+Du** increases the value at the rim of the analog stick.
   * When you change this setting, the current analog stick scaling setting is shown as the numerical coordinates of the analog stick.
-* The scale goes from 90-110, and defaults to 100.
+* The scale goes from 82-125, and defaults to 100.
   * This changes the physical distance to the rim of the Melee unit circle.
+  * At 82, the rim of the Melee unit circle is basically at the rim of the controller, requiring larger motions for things like smash attacks.
+  * At 125, the rim of the Melee unit circle is much farther in, requiring smaller motions for things like smash attacks.
   * 100 will behave identically to previous firmware versions that do not feature stick scaling.
-  * In 0.31 the adjustment range was reduced to be rules-compliant.
 
 # Analog Stick Cardinal Snapping Adjustment - R + A + Du/Dd
 
@@ -306,9 +267,8 @@ This is mainly for use on vanilla Melee or versions of UCF v0.80 and prior, as a
 * Press **R** + **A** + **D-pad Up/Down** to increase/decrease.
   * Example: **RA+Du** increases the snapping range of the analog stick.
   * When you change this setting, the current analog stick cardinal snapping setting is shown as the numerical coordinates of the analog stick.
-* The scale goes from -2 to 6, and defaults to 6.
-  * At -2, the stick will snap 7 units away from the cardinal so that the stick cannot output 1.0 cardinals at all, including on UCF v0.84.
-  * At -1, the stick will snap 1 unit away from the cardinal so that the stick cannot output 1.0 cardinals for Zelda teleport on UCF v0.84.
+* The scale goes from -1 to 6, and defaults to 6.
+  * At -1, the stick will snap *away* from the cardinal so that the stick cannot output 1.0 cardinals at all, including on UCF v0.84.
   * At 0, the stick will not snap to cardinals at all. This is equivalent to OEM cardinal behavior.
   * Between 1-6, the stick will snap to the cardinal from that far away in both positive and negative directions.
 
@@ -319,8 +279,7 @@ The C-Stick Snapback Filter is actually a low-pass filter similar to the Analog 
 * Press **AZ** + **X/Y** for your axis + **D-pad Up/Down** to increase/decrease.
   * Example: **AZX+Du** increases the X-axis snapback suppression, **AZY+Dd** decreases the Y-axis snapback suppression.
   * When you change this setting, the current filter settings are shown as the numerical coordinates of the C-Stick.
-* The scale goes from 0-18 and defaults to 0.
-  * 9 in versions before 0.31 was changed to 18, adding increased precision between 8 and the former 9.
+* The scale goes from 0-9 and defaults to 0.
 * To reduce the chance of getting the wrong move, increase the value on the axis that you don’t want, and decrease the value on the axis you do want.
 * To fully suppress snapback on an axis, use a somewhat high value here (start with 7).
 * Press **R+Start** to see the current snapback filter values on each axis of the Analog Stick.
@@ -334,10 +293,8 @@ This setting controls the threshold where that transition occurs.
 * Press **LZ** + **X/Y** for your axis + **D-pad Up/Down** to increase/decrease.
   * Example: **LZX+Du** increases the effect on the X-axis, **LZY+Dd** decreases effect on the Y-axis.
   * When you change this setting, the current filter settings are shown as the numerical coordinates of the C-Stick.
-* The scale goes from -24 to +24, and defaults to 0.
+* The scale goes from 0-15, and defaults to 0.
   * 0 disables Waveshaping entirely.
-  * Positive Waveshaping behaves like mild PODE.
-  * Negative Waveshaping behaves like strong PODE. In combination with zero snapback suppression this is an alternate, highly effective way to eliminate all snapback, while helping make quick flicks more likely to be polled properly.
 * Press **R+Start** to see the current Waveshaping filter values on the L and R trigger analog values.
   * At the same time, you can see the current snapback filter values on the Analog Stick.
 
@@ -356,8 +313,9 @@ The PhobGCC hard limits its own stick outputs to a range from -125 to +125, but 
   * When you change this setting, the current C-Stick scaling setting is shown as the numerical coordinates of the C-Stick.
 * The scale goes from 82-125, and defaults to 100.
   * This changes the physical distance to the rim of the Melee unit circle.
+  * At 82, the rim of the Melee unit circle is basically at the rim of the controller, requiring larger motions for things like smash attacks.
+  * At 125, the rim of the Melee unit circle is much farther in, requiring smaller motions for things like smash attacks.
   * 100 will behave identically to previous firmware versions that do not feature stick scaling.
-  * In 0.31 the adjustment range was reduced to be rules-compliant.
 
 # C-Stick Cardinal Snapping Adjustment - R + A + Z + Du/Dd
 
@@ -374,29 +332,21 @@ This is mainly for use on vanilla Melee or versions of UCF v0.80 and prior, as a
 
 # Analog Trigger Modes AB + L/R
 
-Modes 8 and 9 are new in version 0.31.
-
 * Press **AB + L** to cycle through the trigger modes for L-trigger.
 * Press **AB + R** to cycle through the trigger modes for R-trigger.
-* Press **L+R+Z** to view all trigger settings without changing anything.
-  * Left trigger mode is on the left stick X axis.
-  * Right trigger mode is on the right stick X axis.
-  * Left trigger offset is on the left stick analog.
-  * Right trigger offset is on the right stick analog.
-* There are 9 trigger modes:
-  * Mode 1: Standard behavior with the analog slider active and a digital press at the bottom of the travel. GTS will show red bars and then turn blue on digital press.
-  * Mode 2: Digital-only, where the analog slider is disabled. GTS will highlight the outline on digital press.
-  * Mode 3: Analog-only, where the digital press is disabled. GTS will show only red bars.
-  * Mode 4: Lightshield then Digital, where the analog slider will only go up to the user-defined max (see [below](#analog-trigger-value-adjustment---b--lr--dudd)) and then allow you to input a digital value. GTS will show red bars that rise but stop at a predefined value, and they will turn blue and max out on digital press.
-  * Mode 5: Analog Value At Digital, where the analog slider is disabled and the digital press will result in a user-defined analog value (see [below](#analog-trigger-value-adjustment---b--lr--dudd)). GTS will only show red bars.
-  * Mode 6: Analog and Digital Value at Digital, where the analog slider is disabled and the digital press will result in a user-defined analog value (see below) and a digital input. GTS will show only blue bars.
+* There are 6 trigger modes:
+  * Mode 1: Standard behavior with the analog slider active and a digital press at the bottom of the travel. Smashscope will show red bars and then turn blue on digital press.
+  * Mode 2: Digital-only, where the analog slider is disabled. Smashscope will show nothing. You will still get LRA+Start in this mode.
+  * Mode 3: Analog-only, where the digital press is disabled. You will still get LRA+Start in this mode. Smashscope will show only red bars.
+  * Mode 4: Lightshield then Digital, where the analog slider will only go up to the user-defined max (see [below](#analog-trigger-value-adjustment---b--lr--dudd)) and then allow you to input a digital value. Smashscope will show red bars that rise but stop at a predefined value, and they will turn blue on digital press.
+  * Mode 5: Analog Value At Digital, where the analog slider is disabled and the digital press will result in a user-defined analog value (see [below](#analog-trigger-value-adjustment---b--lr--dudd)). You will still get LRA+Start in this mode. Smashscope will only show red bars.
+    * Due to the Melee controller ruleset, Mode 5 is incompatible with modes 1, 3, and 4.
+    * If you have Mode 5 set on one trigger and either 1, 3, or 4 on the other trigger, the other trigger will not output anything at all.
+  * Mode 6: Analog and Digital Value at Digital, where the analog slider is disabled and the digital press will result in a user-defined analog value (see below) and a digital input. Smashscope will show only blue bars.
     * This is useful when using a controller with trigger plugs for Smash Ultimate and other games that disregard the digital press.
-  * Mode 7: Hairtrigger Analog, where the analog value is multiplied between one and threefold based on the user-defined analog value (see [below](#analog-trigger-value-adjustment---b--lr--dudd)). The digital output is unchanged.
-    * The greater the value, the higher the multiplier. This is useful for Smash Ultimate so you don't need to push down as far to activate your shield.
-  * Mode 8: Lightshield on Analog: like mode 4 but with no digital output whatsoever.
-  * Mode 9: Hairtrigger Lightshield Then Digital: like mode 4 but with 2.5x more sensitive analog. This is useful for using analog with short travel triggers like keyboard switch triggers.
-* When changing settings, the trigger modes are displayed as Analog Stick values for the L-trigger and C-Stick values for the R-trigger.
-* Regardless of trigger modes (or remaps), L+R+A+Start will function and output full analog and digital on the triggers. This can be used to verify that the hardware is functioning properly.
+  * Mode 7: Hairtrigger Analog, where the analog value is multiplied between one and threefold based on the user-defined analog value (see [below](#analog-trigger-value-adjustment---b--lr--dudd)).
+    * The greater the value, the higher the multiplier. This is useful for Smash Ultimate where you don't need to push down as far to activate your shield.
+* The trigger modes are displayed as Analog Stick values for the L-trigger and C-Stick values for the R-trigger.
 
 # Analog Trigger Value Adjustment - B + L/R + Du/Dd
 
@@ -408,27 +358,22 @@ Modes 8 and 9 are new in version 0.31.
   * Ultimate only shields when the analog value is 79 or above.
   * The values are displayed on the C-Stick, with the X-axis corresponding to L and the Y-axis corresponding to R.
   * Once you cross above 100, the corresponding Analog stick axis will display 100 and the remainder of the value will be shown on the C-Stick.
-  * If you configure in Uncle Punch or 20XX, the C-Stick might not reflect the actual value when the displayed coordinate is outside the Melee input circle. Confirm your settings using GTS or by checking the actual resulting trigger value.
-* Press **L+R+Z** to view all trigger settings without changing anything.
-  * Left trigger mode is on the left stick X axis.
-  * Right trigger mode is on the right stick X axis.
-  * Left trigger offset is on the left stick analog.
-  * Right trigger offset is on the right stick analog.
+  * If you configure in Uncle Punch or 20XX, the C-Stick might not reflect the actual value when the displayed coordinate is outside the Melee input circle. Confirm your settings using Smashscope or by checking the actual resulting trigger value.
 
-# Full Button Remapping - B + X + Y
+# Trigger Jump
 
-This replaced predetermined trigger jump remaps in version 0.31.
+You can swap one of X or Y with one of L, R, or Z.
 
-* You can freely swap the A, B, D-pad Up, L, R, X, Y, and Z buttons.
-* Press **B + X + Y without pressing A** to initialize the remapping process, then press the buttons you want to become A, B, Du, L, R, X, Y, and Z in that order. 
-  * The easy way to remember this is that they are in alphabetical order.
-  * For example, if you wanted to swap just X and Z, you would press A B Du L R Z Y X.
-  * Pressing already-used buttons will have no effect.
-* Press **B + X + R without pressing A** to reset the remaps to default.
-* Any buttons swapped with a trigger only actuate on the digital press of the trigger.
-* If you swap a trigger button to a digital-only button, you should probably use Mode 5 or 6 depending on the desired analog or digital behavior.
-* Remaps have no effect on any of the commands used in this document.
-* Remaps also are ignored if you press L+R+A+Start using the un-remapped buttons.
+If you swap with L or R, X or Y will act only as a digital press input on the trigger.
+Conversely, X or Y will only be output when the swapped trigger's digital press is engaged.
+So if you want Melee lightshield on the face button use Mode 5, and if you want a shield that works in both Melee and Ultimate use Mode 6.
+
+* Press **XZ+Start** to swap X and Z. This will swap back if previously swapped.
+* Press **YZ+Start** to swap Y and Z. This will swap back if previously swapped.
+* Press **LX+Start** to swap X and L. This will swap back if previously swapped.
+* Press **LY+Start** to swap Y and L. This will swap back if previously swapped.
+* Press **RX+Start** to swap X and R. This will swap back if previously swapped.
+* Press **RY+Start** to swap Y and R. This will swap back if previously swapped.
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
