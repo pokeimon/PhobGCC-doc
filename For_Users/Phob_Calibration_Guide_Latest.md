@@ -77,14 +77,17 @@ If the controller is functioning normally, this has already been performed and y
 
 ![Sticks pointing up and to the right, triggers pressed](/For_Users/Phob_Calibration_Guide_v0.20_Images/FreezeSticks_GTS.png)
 
-# Safe Mode Toggle - AXY+Start
+# Safe Mode/Configure Mode Toggle - AXY+Start
 
-* As a reminder, all commands including this one utilize the hardware buttons specified, regardless of remapping.
-* To turn off Safe Mode, you have to hold the key combination for about 1 second, to prevent accidental activation.
+The controller begins in Safe Mode, where the only command that works is this toggle, in order to prevent accidental settings changes.
+
+To make any changes to the controller configuration, activate this toggle to enter Configure Mode.
+
+* To enter Configure Mode, you have to hold the key combination for about 1 second, to prevent accidental activation.
   * Turning Safe Mode back on has no delay.
-* This is required to make any changes on the controller, to prevent you from reconfiguring things during gameplay.
-* Even if you haven't pressed B, this will wake up the sticks.
-* When you turn Safe Mode off (configuration is possible), the controller freezes for 2 seconds.
+* As a reminder, all commands including this one utilize the hardware buttons specified, regardless of remapping.
+* Even if you haven't pressed B, this will wake up the sticks. It responds instantly if the sticks haven't activated yet, due to an implementation quirk.
+* When you enter Configuration Mode, the controller freezes for 2 seconds.
 * When you turn Safe Mode back on (you can no longer configure), the controller freezes for 4 seconds to distinguish. You can also just unplug and plug the controller back in to ensure that you are back in Safe Mode.
 * If either L or R digital is active, this command will not work (to prevent safe mode toggling when doing PM salty runback).
 
@@ -94,7 +97,7 @@ If the controller is functioning normally, this has already been performed and y
   * The Y-axis will show the tens and ones digits. In this case, it would be 31.
   * The X-axis will show the thousands and hundreds digits. In this case, it would be 0.
 * You must use GTS to see this numerically.
-* If the controller doesn't show 31, then you need to reference an older configuration document [here](LEGACY.md).
+* If the controller doesn't show 31, then you need to reference an older configuration document [here](../LEGACY.md).
   * If it doesn't respond to this command at all, then it's likely the version is 0.23 or lower and you should [upgrade the controller firmware](/For_Users/Phob_Programming_Guide.md).
 
 # Controller Reset - Hold ABZ then press Start
@@ -156,11 +159,9 @@ If this isn't the case, then the hardware likely needs some sort of repair.
 
 # Analog Stick Calibration - AXY+L
 
-Before you begin calibration, you must verify that the sticks are working electrically and that GCC Test Suite is initialized properly.
+Before calibrating, you must check that the Origin XY and C-Origin XY are both (-001, -001). For newer Lossless and GC Pocket+ adapters, they should both be 0.
 
-Check that the Origin XY and C-Origin XY are both (-001, -001).
-
-Put the controller into Raw Stick Output mode and verify that the sticks are centered roughly on 30 or 50, and are sensitive enough to stick motion in all axes.
+If you suspect something is wrong with the controller you must verify that the sticks are working electrically. To do so, put the controller into Raw Stick Output mode and verify that the sticks are centered roughly on +30 or +50, and are sensitive enough to stick motion in all axes. When you move the sticks in a circle around the gate, they should move in a small circle onscreen.
 
 [Basic PhobGCC Analog Stick Calibration - YouTube](https://www.youtube.com/watch?v=rkgtqwIE8Iw)
 
