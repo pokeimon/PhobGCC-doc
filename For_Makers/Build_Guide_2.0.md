@@ -303,6 +303,9 @@ This should be the result.
 
 Next, load firmware onto the RP2040.
 
+***DO NOT WAIT UNTIL AFTER BUILDING TO FLASH FIRMWARE!!!***
+Put firmware on first or else you won't know if your board is dead, your USB cable is bad, or if you screwed something up when assembling.
+
 You can download it [here](https://github.com/PhobGCC/PhobGCC-SW/releases).
 
 Plug the board into a computer via the micro USB port while holding button S1 on the motherboard, then release the button.
@@ -311,6 +314,7 @@ Drag-and-drop the .uf2 firmware file from the software release page into that dr
 The mass storage device will disappear and you are done loading firmware on.
 
 If you ever need to change or update the firmware, simply repeat the process.
+
 
 ## Z button Switch Soldering
 
