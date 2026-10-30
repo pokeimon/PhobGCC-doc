@@ -110,8 +110,10 @@ The remaining parts can be purchased from distributors as listed below.
   * [D12 Magnets](https://www.kjmagnetics.com/proddetail.asp?prod=d12-n52)
   * [N30H Magnets](https://www.digikey.com/short/br3n8hz3)
   * [Canadian DH1H1-like option](https://www.indigoinstruments.com/magnets/rare_earth/discs/small-neodymium-cylinder-magnet-2.5x2.5mm.html)
+  * [Mexican N30h-like option](https://www.mercadolibre.com.mx/iman-3mm-x-2mm-n35-9000-gauss-20-pzas/up/MLMU4266741512)
   * [EU N30h-like option](https://www.supermagnete.de/eng/disc-magnets-neodymium?length-or-diameter=2.00,3.00&height=2.00,3.00)
   * [Australian DH1H1-like option](https://magnet.com.au/products/neodymium-cylinder-magnet-2-5mm-x-2-5mm-n50?variant=37006192804005)
+  * If none of the above is available, order a 2x2mm, 2.5x2.5mm, or 2mm long by 3mm diameter cylindrical magnet with **axial magnetization**. North and south poles must be on the flat faces.
 * Magnet Mounts:
   * **NOTE: PhobGCC v1.X MAGNET MOUNTS WILL BE VERY BAD, AND MAY NOT WORK AT ALL. MAKE SURE TO GET THE UNDERSLUNG MAGNET MOUNTS!**
   * Download [This](https://drive.google.com/file/d/10-lseJ4UK1-HkkXc6rjSJtsYRW7ihsXD/view?usp=share_link) OpenScad file. It is by default set up for DH1H1 Magnets, so you can edit it for whatever magnet you use, adjust it for your printer, and then generate the STL using [OpenScad](https://openscad.org/). Once you have the STL, you can print it using your own machine or check out local makerspaces, libraries, and print shops.

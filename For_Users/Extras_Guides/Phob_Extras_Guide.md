@@ -9,7 +9,7 @@ This is a guide to enabling Extras, community-created features that require to b
 # Directional Configurations
 
 When enabling an Extra, it must be assigned to one of 4 cardinal directional 
-configuration slots to toggle the feature and and configure its settings. 
+configuration slots to toggle the feature and configure its settings. 
 
 The two button combinations that are used to toggle and configure Extras are:
 
