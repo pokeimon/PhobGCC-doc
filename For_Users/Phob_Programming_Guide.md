@@ -9,7 +9,7 @@ Here's a [video walkthrough](https://youtu.be/QWJy-NiV2nU) if you would like to 
 * A computer running Windows, MacOS, or Linux.
 * A screwdriver for opening your controller (Tri-point is the stock screw, but some controllers may be built with Torx or Phillips).
 * A data-capable micro-USB cable with a compact plug.
-  * [This cable](https://www.amazon.com/gp/product/B093SWG63B) is the recommended one should you just want to buy one.
+  * [This cable](https://www.amazon.com/dp/B093SWG63B?tag=phobgcc-20) is the recommended one should you just want to buy one.
 
 # Controller Disassembly
 

@@ -93,7 +93,7 @@ The remaining parts can be purchased from distributers as listed below:
   * [Canadian option](https://www.indigoinstruments.com/magnets/rare_earth/discs/small-neodymium-cylinder-magnet-2.5x2.5mm.html) - Similar to DH1H1
   * [For EU](https://www.supermagnete.de/eng/disc-magnets-neodymium?length-or-diameter=2.00,3.00&height=2.00,3.00)
 * High Viscosity Glue:
-  * [Gorilla superglue gel](https://www.amazon.com/dp/B00OAAUAX8)
+  * [Gorilla superglue gel](https://www.amazon.com/dp/B00OAAUAX8?tag=phobgcc-20)
   * [Epoxy](https://www.mcmaster.com/66195A13/)
 * Magnet Holders:
   * See the `3d-printing` channel in the discord for printable designs that will hold magnets to the stickbox. Use in concert with the above adhesive for easy and secure attachment.
@@ -132,4 +132,4 @@ The GCC-specific Parts have a few different methods of acquisition
   * Mouseclick - [SimpleControllers](https://simplecontrollers.bigcartel.com/mouseswitch-z)
 * Optional Rumble Motor
   * Any GCC
-  * [Cellphone Rumble](https://www.amazon.com/10-Pieces-Vibration-Motor-Vibrating/dp/B00N9J3BTG)
+  * [Cellphone Rumble](https://www.amazon.com/10-Pieces-Vibration-Motor-Vibrating/dp/B00N9J3BTG?tag=phobgcc-20)
